@@ -31,7 +31,9 @@ export default class HomeScreen extends Component {
             <View style={styles.container}>
                 <View style={styles.containerLoginRegister}>
                     <View style={styles.login}>
-                        <TouchableOpacity>
+                        <TouchableOpacity
+                            onPress={ () => this.props.navigation.navigate('Login') }
+                        >
                             <Text>Login</Text>
                         </TouchableOpacity>
                     </View>
