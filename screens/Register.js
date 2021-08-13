@@ -43,10 +43,10 @@ export default class Register extends Component {
                     <TextInput style={{ borderWidth: 2, borderRadius: 4, width: 220, paddingLeft: 20, marginBottom: 5 }}
                         placeholder="Email"
                     />
-                    <TextInput style={{ borderWidth: 2, borderRadius: 4, width: 220, paddingLeft: 20, marginBottom: 5 }}
+                    <TextInput secureTextEntry={true} style={{ borderWidth: 2, borderRadius: 4, width: 220, paddingLeft: 20, marginBottom: 5 }}
                         placeholder="Senha"
                     />
-                    <TextInput style={{ borderWidth: 2, borderRadius: 4, width: 220, paddingLeft: 20 }}
+                    <TextInput secureTextEntry={true} style={{ borderWidth: 2, borderRadius: 4, width: 220, paddingLeft: 20 }}
                         placeholder="Confirmação da senha"
                     />
                 </View>
@@ -57,8 +57,8 @@ export default class Register extends Component {
                     />
                     <TouchableOpacity 
                         style={{ margin: 10, marginBottom: 20}}
-                        
-                        >
+                        onPress={ () => this.props.navigation.navigate('Login')}    
+                    >
                         <Text>Já possui uma conta? Entre!</Text>
                     </TouchableOpacity>
                 </View>
