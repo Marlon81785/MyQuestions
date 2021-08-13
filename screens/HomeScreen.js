@@ -1,6 +1,6 @@
 import { Button, View, Text, TextInput, TouchableOpacity, ViewBase } from 'react-native';
 import React, { Component } from "react";
-import { styles } from "../style/Home";
+import { styles } from "../style/HomeStyle";
 
 export default class HomeScreen extends Component {
     constructor({ navigation }){
@@ -38,7 +38,9 @@ export default class HomeScreen extends Component {
                         </TouchableOpacity>
                     </View>
                     <View style={styles.register}>
-                        <TouchableOpacity>
+                        <TouchableOpacity
+                            onPress={ () => this.props.navigation.navigate('Register') }
+                        >
                             <Text>Register</Text>
                         </TouchableOpacity>
                     </View>
@@ -58,9 +60,6 @@ export default class HomeScreen extends Component {
                     />
                 </View>
               
-              
-              
-        
             </View>
         );
     }

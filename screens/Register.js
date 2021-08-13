@@ -1,8 +1,8 @@
 import { Button, View, Text, TextInput, TouchableOpacity, ViewBase } from 'react-native';
 import React, { Component } from "react";
-import { styles } from "../style/LoginStyle";
+import { styles } from "../style/RegisterStyle";
 
-export default class Login extends Component {
+export default class Register extends Component {
     constructor({ navigation }){
         super();
         this.state = {
@@ -32,28 +32,34 @@ export default class Login extends Component {
                 
 
                 <View style={styles.containerInput}>
-                    <Text style={styles.text1}>Entrar</Text>
+                    <Text style={styles.text1}>Criando sua conta</Text>
                     
                 </View>
                 
                 <View style={styles.containerInput}>
                     <TextInput style={{ borderWidth: 2, borderRadius: 4, width: 220, paddingLeft: 20, marginBottom: 5 }}
+                        placeholder="Nome"
+                    />
+                    <TextInput style={{ borderWidth: 2, borderRadius: 4, width: 220, paddingLeft: 20, marginBottom: 5 }}
                         placeholder="Email"
                     />
-                    <TextInput style={{ borderWidth: 2, borderRadius: 4, width: 220, paddingLeft: 20 }}
+                    <TextInput style={{ borderWidth: 2, borderRadius: 4, width: 220, paddingLeft: 20, marginBottom: 5 }}
                         placeholder="Senha"
+                    />
+                    <TextInput style={{ borderWidth: 2, borderRadius: 4, width: 220, paddingLeft: 20 }}
+                        placeholder="Confirmação da senha"
                     />
                 </View>
 
                 <View style={{ margin: 10, marginBottom: 20}}>
                     <Button
-                        title="Entrar"
+                        title="Cadastrar"
                     />
                     <TouchableOpacity 
                         style={{ margin: 10, marginBottom: 20}}
                         
                         >
-                        <Text>Não possui cadastro? crie agora!</Text>
+                        <Text>Já possui uma conta? Entre!</Text>
                     </TouchableOpacity>
                 </View>
                 
